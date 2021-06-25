@@ -52,7 +52,7 @@ public class CreateEnemy : MonoBehaviour
         for (int i = 0; i < 2; i++)
         {
             float randomY = Random.Range(3.7f, -3.7f); 
-            float randomX = Random.Range(8.5f, 9f);
+            float randomX = Random.Range(7.5f, 8f);
             Vector3 pos = new Vector3(randomX, randomY, 0);
             if (i == 1)
             {
