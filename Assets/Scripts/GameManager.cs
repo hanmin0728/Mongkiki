@@ -42,8 +42,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         createEnemy = GetComponent<CreateEnemy>();
-        MaxPosition = new Vector2(9.7f, 4.5f);
-        MinPosition = new Vector2(-9.7f, -4.5f);
+        MaxPosition = new Vector2(8.5f, 4.5f);
+        MinPosition = new Vector2(-8.5f, -4.5f);
         poolManager = FindObjectOfType<PoolManager>();
         allPoolManager = FindObjectOfType<AllPoolManager>();
         Player = FindObjectOfType<PlayerMove>();
