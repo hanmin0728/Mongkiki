@@ -2,13 +2,9 @@ using UnityEngine;
 
 public class BulletMove : MonoBehaviour
 {
-    protected GameManager gameManager = null;
+
     [SerializeField]
     protected float speed = 10f;
-    void Start()
-    {
-        gameManager = FindObjectOfType<GameManager>();
-    }
 
     void Update()
     {
@@ -23,7 +19,7 @@ public class BulletMove : MonoBehaviour
 
     protected virtual void Domain()
     {
-        if (transform.localPosition.x > gameManager.MaxPosition.x + 3f)
+        if (transform.localPosition.x > GameManager.Instance.MaxPosition.x + 3f)
         {
             Pooling();
         }
@@ -31,7 +27,7 @@ public class BulletMove : MonoBehaviour
 
     public void Pooling()
     {
-        transform.SetParent(gameManager.poolManager.transform);
+        transform.SetParent(GameManager.Instance.PoolManager.transform);
         gameObject.SetActive(false);
     }
 }

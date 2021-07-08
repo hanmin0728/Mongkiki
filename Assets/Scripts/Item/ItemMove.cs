@@ -6,13 +6,12 @@ public class ItemMove : MonoBehaviour
 {
     [SerializeField]
     private float speed = 12f;
-    private GameManager gameManager;
+
     private AllPooler allPooler;
 
     void Start()
     {
         allPooler = GetComponent<AllPooler>();
-        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -26,7 +25,7 @@ public class ItemMove : MonoBehaviour
     }
     private void Domain()
     {
-        if (transform.position.y < gameManager.MinPosition.y -2f)
+        if (transform.position.y < GameManager.Instance.MinPosition.y -2f)
         {
             allPooler.DeSpawn();
         }

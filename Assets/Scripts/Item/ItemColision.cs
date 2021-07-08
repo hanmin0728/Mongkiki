@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ItemColision : MonoBehaviour
 {
+
     private bool isTouch = false;
+
     private PlayerAttack playerAttack;
+
     private PlayerMove playerMove;
+
     public int index;
 
     void Start()
@@ -30,7 +34,6 @@ public class ItemColision : MonoBehaviour
                 case 1: // 코코넛
                     playerAttack.attackPower = 3;
                     playerAttack.StartResetAttackPower();
-                    // Debug.Log("공격력 증가");
                     break;
 
                 case 2: // 망고
@@ -38,7 +41,6 @@ public class ItemColision : MonoBehaviour
                     playerAttack.bulletDelay = 0.1f;
                     playerMove.StartResetSpeed();
                     playerAttack.StartResetBulletDelay();
-                    //Debug.Log("스피드 업");
                     break;
 
                 case 3: // 두리안
@@ -46,7 +48,6 @@ public class ItemColision : MonoBehaviour
                     playerAttack.bulletDelay = 1f;
                     playerMove.StartResetSpeed();
                     playerAttack.StartResetBulletDelay();
-                    //Debug.Log("스피드 다운");
                     break;
             }
         }

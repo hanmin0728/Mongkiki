@@ -23,8 +23,7 @@ public class BeeEnemyMove : BeeHouseEnemyMove
         yield return new WaitForSeconds(0.2f);
         col.enabled = true;
         allPooler.DeSpawn();
-        gameManager.AddScore(score2);
-
+        GameManager.Instance.AddScore(score2);
     }
   
  

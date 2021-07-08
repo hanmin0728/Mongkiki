@@ -3,9 +3,9 @@ using UnityEngine;
 public class EnemyBulletMove : BulletMove
 {
     private AllPooler allPooler;
+
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
         allPooler = GetComponent<AllPooler>();
     }
 
@@ -16,7 +16,7 @@ public class EnemyBulletMove : BulletMove
     }
     protected override void Domain()
     {
-        if (transform.position.x < gameManager.MinPosition.x)
+        if (transform.position.x < GameManager.Instance.MinPosition.x)
         {
             allPooler.DeSpawn();
         }

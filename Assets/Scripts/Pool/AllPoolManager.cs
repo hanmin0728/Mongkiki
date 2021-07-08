@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class AllPoolManager : MonoBehaviour
 {
+  //  public static AllPoolManager Instance;
+
     [SerializeField]
     private GameObject[] prefab;
+
     private GameObject buket = null;
+
     private AllPooler allPooler; 
     public GameObject GetPool(int findIndex)
     {
@@ -17,7 +21,7 @@ public class AllPoolManager : MonoBehaviour
             if (allPooler.index == findIndex)
             {
                 buket = allPooler.gameObject;
-                break;
+                break;  
             }
         }
         if (buket == null)

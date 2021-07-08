@@ -8,7 +8,6 @@ public class BeeHouseEnemyMove : MonoBehaviour
     protected Collider2D col = null;
     private PlayerAttack playerAttack;
     protected AllPooler allPooler;
-    protected GameManager gameManager;
     protected GameObject newbee;
     public bool isDead = false;
     public bool isDamaded = false;
@@ -21,7 +20,6 @@ public class BeeHouseEnemyMove : MonoBehaviour
     private void Start()
     {
         if (isDead) return;
-        gameManager = FindObjectOfType<GameManager>();
         allPooler = GetComponent<AllPooler>();
         playerAttack = FindObjectOfType<PlayerAttack>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -40,7 +38,7 @@ public class BeeHouseEnemyMove : MonoBehaviour
 
     protected void DoMain()
     {
-        if (transform.position.x < gameManager.MinPosition.x)
+        if (transform.position.x < GameManager.Instance.MinPosition.x)
         {
             allPooler.DeSpawn();
         }
@@ -80,7 +78,7 @@ public class BeeHouseEnemyMove : MonoBehaviour
         isDamaded = false;
     }
 
-    protected virtual IEnumerator ShowDead() // 애니메이션을 처리해주는 데드
+    protected virtual IEnumerator ShowDead() 
     {
         StartCoroutine(CreateBee());
         spriteRenderer.material.SetColor("_Color", new Color(1f, 1f, 1f, 0f));
@@ -89,14 +87,14 @@ public class BeeHouseEnemyMove : MonoBehaviour
         col.enabled = true;
         spriteRenderer.material.SetColor("_Color", new Color(1f, 1f, 1f, 1f));
         allPooler.DeSpawn();
-        gameManager.AddScore(score1);
+        GameManager.Instance.AddScore(score1);
     }
 
     private IEnumerator CreateBee()
     {
         for (int i = 0; i < 2; i++)
         {
-            newbee = gameManager.allPoolManager.GetPool(3);
+            newbee = GameManager.Instance.AllPoolManager.GetPool(3);
             newbee.transform.position = transform.position + new Vector3(Random.Range(-0.8f, 0.8f), Random.Range(-0.8f, 0.8f), 0f);
             newbee.GetComponent<BeeEnemyMove>().isDead = false;
             newbee.GetComponent<BeeEnemyMove>().isDamaded = false;
@@ -104,7 +102,6 @@ public class BeeHouseEnemyMove : MonoBehaviour
             newbee.gameObject.SetActive(true);
             yield return new WaitForSeconds(0.1f);
         }
-
     }
 
 }

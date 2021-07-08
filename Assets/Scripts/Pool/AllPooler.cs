@@ -7,16 +7,16 @@ public class AllPooler : MonoBehaviour
     [SerializeField]
     private int setIndex;
     public int index  { get; private set; }
-    private GameManager gameManager = null;
+
     void Start()
-    {
-        gameManager = FindObjectOfType<GameManager>();
+    { 
         index = setIndex;
     }
 
     public void DeSpawn()
     {
-        transform.SetParent(gameManager.allPoolManager.transform);
-        gameObject.SetActive(false);
+        transform.SetParent(GameManager.Instance.AllPoolManager.transform);
+        gameObject.SetActive(false);    
     } 
+
 }

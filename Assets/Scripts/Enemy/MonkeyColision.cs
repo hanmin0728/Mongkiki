@@ -4,21 +4,27 @@ using UnityEngine;
 public class MonkeyColision : MonoBehaviour
 {
 
-    private GameManager gameManager = null;
     private Collider2D col = null;
+
     private SpriteRenderer spriteRenderer = null;
+
     public int hp = 3;
+
     public bool isDead = false;
+
     private bool isDamaged = false;
+
     private PlayerAttack playerAttack;
+
     private AllPooler allPooler;
+
+    private int score3 = 100;
 
     void Awake()
     {
         if (isDead) return;
         allPooler = GetComponent<AllPooler>();
         playerAttack = FindObjectOfType<PlayerAttack>();
-        gameManager = FindObjectOfType<GameManager>();
         col = GetComponent<Collider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -61,5 +67,6 @@ public class MonkeyColision : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         col.enabled = true;
         allPooler.DeSpawn();
+        GameManager.Instance.AddScore(score3);
     }
 }

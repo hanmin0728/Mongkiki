@@ -7,21 +7,19 @@ public class ItemSpawn : MonoBehaviour
     [SerializeField]
     private GameObject[] items = new GameObject[3];
     private List<int> randompersent = new List<int> { 20, 40, 40 };
-    private GameManager gameManager;
-    private AllPoolManager allPoolManager;
+   
     private void Start()
     {
-        allPoolManager = FindObjectOfType<AllPoolManager>();
-        gameManager = FindObjectOfType<GameManager>();
         StartCoroutine(SpawnItem());
     }
+
     private IEnumerator SpawnItem()
     {
         while (true)
         {
-            float randomx = Random.Range(gameManager.MinPosition.x, gameManager.MaxPosition.x);
+            float randomx = Random.Range(GameManager.Instance.MinPosition.x, GameManager.Instance.MaxPosition.x);
             yield return new WaitForSeconds(3f);
-            GameObject obj = allPoolManager.GetPool(ReturnRandomInterger() + 4);
+            GameObject obj = GameManager.Instance.AllPoolManager.GetPool(ReturnRandomInterger() + 4);
             obj.transform.position = new Vector2(randomx, 10);
             obj.transform.position = new Vector2(Mathf.Clamp(obj.transform.position.x, -10f, 9f),
              Mathf.Clamp(obj.transform.position.y, -3.7f, 3.9f));

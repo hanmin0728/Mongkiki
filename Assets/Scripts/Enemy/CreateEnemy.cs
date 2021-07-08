@@ -7,13 +7,11 @@ public class CreateEnemy : MonoBehaviour
     private GameObject beeHousePrefab;
     [SerializeField]
     private GameObject enemyMonkeyPrefab = null;
-    private GameManager gameManager = null;
  
     private GameObject newbeehouse;
    
     private void Awake()
     {
-        gameManager = FindObjectOfType<GameManager>();
         StartCoroutine(SpawnBeeHouse());
     }
 
@@ -24,7 +22,7 @@ public class CreateEnemy : MonoBehaviour
             for (int i = 0; i < 3; i++)
             {
                 float randomY = Random.Range(3.7f, -3.7f);
-                newbeehouse = gameManager.allPoolManager.GetPool(2);
+                newbeehouse = GameManager.Instance.AllPoolManager.GetPool(2);
                 newbeehouse.transform.position = new Vector2(8f,randomY);
                 newbeehouse.gameObject.SetActive(true);
                 newbeehouse.GetComponent<BeeHouseEnemyMove>().hp = 2;
@@ -43,7 +41,7 @@ public class CreateEnemy : MonoBehaviour
 
             for (int i = 0; i < 2; i++)
             {
-                objs[i] = gameManager.allPoolManager.GetPool(0);
+                objs[i] = GameManager.Instance.AllPoolManager.GetPool(0);
                 objs[i].gameObject.SetActive(true);
                 objs[i].GetComponent<MonkeyColision>().hp = 5;
                 objs[i].GetComponent<MonkeyColision>().isDead = false;
@@ -64,7 +62,7 @@ public class CreateEnemy : MonoBehaviour
             }
             objs[i].transform.position = pos;
             objs[i].transform.position = new Vector2(Mathf.Clamp(objs[i].transform.position.x, -10f, 9f),
-                Mathf.Clamp(objs[i].transform.position.y, -3.7f, 3.9f));  //만약 포지션이 넘어가면 다시 안넘어가는 값으로초기화
+                Mathf.Clamp(objs[i].transform.position.y, -3.7f, 3.9f));  
         }
     }
 
