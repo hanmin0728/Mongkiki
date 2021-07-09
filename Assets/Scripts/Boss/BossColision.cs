@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossColision : MonoBehaviour
 {
@@ -63,5 +64,7 @@ public class BossColision : MonoBehaviour
         col.enabled = true;
         Destroy(gameObject);
         GameManager.Instance.AddScore(score5);
+        
+        SceneManager.LoadScene("Clear");
     }
 }

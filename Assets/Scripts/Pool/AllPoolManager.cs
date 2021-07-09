@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class AllPoolManager : MonoBehaviour
 {
-  //  public static AllPoolManager Instance;
-
     [SerializeField]
     private GameObject[] prefab;
 

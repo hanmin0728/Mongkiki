@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameOverManager : MonoBehaviour
+public class GameClearManager : MonoBehaviour
 {
     [SerializeField]
     private Text textBest = null;
@@ -15,5 +15,7 @@ public class GameOverManager : MonoBehaviour
     public void OnClickRetry()
     {
         SceneManager.LoadScene("Start");
+        SoundManager.Instance.ButtonSound();
     }
+
 }

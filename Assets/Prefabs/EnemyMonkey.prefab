@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1336904976848336688}
   - component: {fileID: 1888367801727707076}
   - component: {fileID: -1015992871204931509}
+  - component: {fileID: 8317379623432454863}
   m_Layer: 6
   m_Name: EnemyMonkey
   m_TagString: EnemyMonkey
@@ -236,3 +237,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setIndex: 0
+--- !u!114 &8317379623432454863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519860679219882327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2557b5ce358dc46a58a9cb69a94f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

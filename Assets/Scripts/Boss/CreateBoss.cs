@@ -8,11 +8,15 @@ public class CreateBoss : MonoBehaviour
     private GameObject boosPrefab;
     void Start()
     {
-        Instantiate(boosPrefab, new Vector2(9f, 0f), Quaternion.identity);
+      
     }
 
     void Update()
     {
         
+    }
+    public void CreatBoss()
+    {
+        Instantiate(boosPrefab, new Vector2(9f, 0f), Quaternion.identity);
     }
 }

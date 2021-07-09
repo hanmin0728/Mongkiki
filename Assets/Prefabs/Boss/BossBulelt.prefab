@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9103204212242518368}
   - component: {fileID: 7592778542643890485}
   - component: {fileID: 3781381768257434179}
+  - component: {fileID: 8243047540326543875}
   m_Layer: 0
   m_Name: BossBulelt
   m_TagString: Untagged
@@ -133,3 +134,16 @@ PolygonCollider2D:
       - {x: 0.6195457, y: -0.08884901}
       - {x: 0.5787392, y: 0.47952724}
       - {x: 0.4924212, y: 0.49921203}
+--- !u!114 &8243047540326543875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5847522212319633162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8cfa3af03a74bb4f9d3ae784e97dedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
