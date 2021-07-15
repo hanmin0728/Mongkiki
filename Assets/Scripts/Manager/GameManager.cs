@@ -3,9 +3,26 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingelton<GameManager>
 {
-    public static GameManager Instance;
+   // public static GameManager Instance;
+    //private static GameManager instance = null;
+
+    //public static GameManager Instance
+    //{
+    //    get
+    //    {
+    //        if (instance == null)
+    //        {
+    //            FindObjectOfType<GameManager>();
+    //            if (instance == null)
+    //            {
+    //                instance = new GameObject("GameManager").AddComponent<GameManager>();
+    //            }
+    //        }
+    //        return instance;
+    //    }
+    //}
     public Vector2 MinPosition { get; private set; }
     public Vector2 MaxPosition { get; private set; }
 
@@ -65,16 +82,16 @@ public class GameManager : MonoBehaviour
     public GameObject boss;
     private void Awake()
     {
-        path = Application.persistentDataPath + "/" + "score.txt";
-        if (Instance != null)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-           // DontDestroyOnLoad(this);
-        }
+        //path = Application.persistentDataPath + "/" + "score.txt";
+        //if (Instance != null)
+        //{
+        //    Destroy(this);
+        //}
+        //else
+        //{
+        //    Instance = this;
+        //   // DontDestroyOnLoad(this);
+        //}
 
         Time.timeScale = 1f;
 
