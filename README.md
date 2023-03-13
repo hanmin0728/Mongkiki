@@ -22,8 +22,3 @@
 
 - <https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000759957>
 ---
-
-![사진1](https://user-images.githubusercontent.com/72392141/210330245-bf3a9539-f088-4362-83c5-7a4e474cf74f.png)<br/>
-![사진2](https://user-images.githubusercontent.com/72392141/210330254-0e5d155b-0957-4987-8461-b1380e0cd689.png)<br/>
-![사진3](https://user-images.githubusercontent.com/72392141/210330256-60d27b2a-013b-4480-b7b5-b2097b102b13.png)<br/>
-![사진4](https://user-images.githubusercontent.com/72392141/210330265-e6247b4e-d615-4c43-8cde-2dc91a198117.png)<br/>
