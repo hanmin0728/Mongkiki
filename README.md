@@ -1,7 +1,7 @@
 # 😻Mongkiki😻
 > 1학년 1학기 엔진 우수작 프로젝트
 
-![image](https://user-images.githubusercontent.com/72392141/210330558-e82250f4-9f14-468d-8bfc-05ad6ac918b9.png)
+![image](https://github.com/main.png/README.md)
 
 ---
 
