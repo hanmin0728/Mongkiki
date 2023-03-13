@@ -20,7 +20,7 @@
 
 ## 🍰 다운로드 (원스토어)
 
-<https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000759957>
+- <https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000759957>
 ---
 
 ![사진1](https://user-images.githubusercontent.com/72392141/210330245-bf3a9539-f088-4362-83c5-7a4e474cf74f.png)<br/>
